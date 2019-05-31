@@ -4,7 +4,7 @@ window.onload = function() {
 
     let animationInProgress = false;
     let animationCounter = 0;
-    let audio = new Audio('dice.wav');
+    let audio = new Audio('dice.mp3');
 
 
     function getRandomInt(min, max) {
