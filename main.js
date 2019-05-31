@@ -4,6 +4,8 @@ window.onload = function() {
 
     let animationInProgress = false;
     let animationCounter = 0;
+    let audio = new Audio('dice.wav');
+
 
     function getRandomInt(min, max) {
         min = Math.ceil(min);
@@ -41,6 +43,7 @@ window.onload = function() {
         }
         animationInProgress = true;
         animationCounter = 0;
+        audio.play();
         anim();
     }
 
