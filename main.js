@@ -25,8 +25,8 @@ window.onload = function() {
     }
 
     function anim() {
-        if (animationCounter < 8) {
-            setTimeout(anim, 1 + animationCounter * 12);
+        if (animationCounter < 12) {
+            setTimeout(anim, 10 + animationCounter * 8);
             animationCounter = animationCounter + 1;
             firstDice = (firstDice + 1) & 3;
             secondDice = (secondDice + 1) & 3;
