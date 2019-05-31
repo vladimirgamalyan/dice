@@ -19,7 +19,7 @@ body {
 .col {
     display: table-cell;
     vertical-align: middle;
-    font: bold 140pt Arial;
+    font: bold 40vh Arial;
     text-align: center;
     color: #333333
 }
