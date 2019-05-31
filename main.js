@@ -50,5 +50,6 @@ window.onload = function() {
     let clickArea = document.getElementsByClassName('click_area')[0];
     clickArea.addEventListener('click', startRoll);
 
-    //document.addEventListener("touchstart", roll, false);
+    document.addEventListener("touchstart", roll, false);
+    document.addEventListener("touchmove ", roll, false);
 };
