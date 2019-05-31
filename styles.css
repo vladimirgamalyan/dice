@@ -18,7 +18,7 @@ body {
 .col {
     display: table-cell;
     vertical-align: middle;
-    font: bold 240pt Arial;
+    font: bold 180pt Arial;
     text-align: center;
 }
 
