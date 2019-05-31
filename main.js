@@ -18,9 +18,8 @@ window.onload = function() {
         dice[1].innerHTML = getRandomDice();
     }
 
-    let clickArea = document.getElementsByClassName('click_area')[0];
-    clickArea.addEventListener('click', roll);
+    // let clickArea = document.getElementsByClassName('click_area')[0];
+    // clickArea.addEventListener('click', roll);
 
     document.addEventListener("touchstart", roll, false);
 };
- 
