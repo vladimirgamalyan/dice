@@ -47,9 +47,14 @@ window.onload = function() {
         anim();
     }
 
+    function touchEventHandler(event) {
+        event.preventDefault();
+        startRoll();
+    }
+
     let clickArea = document.getElementsByClassName('click_area')[0];
     clickArea.addEventListener('click', startRoll);
 
-    document.addEventListener("touchstart", startRoll, false);
-    document.addEventListener("touchmove ", startRoll, false);
+    document.addEventListener("touchstart", touchEventHandler, false);
+    document.addEventListener("touchmove ", touchEventHandler, false);
 };
