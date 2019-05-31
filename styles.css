@@ -19,8 +19,9 @@ body {
 .col {
     display: table-cell;
     vertical-align: middle;
-    font: bold 180pt Arial;
+    font: bold 140pt Arial;
     text-align: center;
+    color: #333333
 }
 
 .row:nth-child(1) {
