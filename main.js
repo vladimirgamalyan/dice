@@ -8,7 +8,6 @@ window.onload = function() {
     let firstDice = 0;
     let secondDice = 0;
 
-
     function getRandomInt(min, max) {
         min = Math.ceil(min);
         max = Math.floor(max);
@@ -25,30 +24,15 @@ window.onload = function() {
         dice[1].innerHTML = second;
     }
 
-    function updateDice() {
-        setDice(firstDice, secondDice);
-    }
-
-    function roll() {
-        setDice(getRandomDice(), getRandomDice());
-    }
-
     function anim() {
         if (animationCounter < 8) {
             setTimeout(anim, 1 + animationCounter * 12);
             animationCounter = animationCounter + 1;
-            firstDice = firstDice + 1;
-            if (firstDice > 3) {
-                firstDice = 0;
-            }
-            secondDice = secondDice + 1;
-            if (secondDice > 3) {
-                secondDice = 0;
-            }
-            updateDice();
+            firstDice = (firstDice + 1) & 3;
+            secondDice = (secondDice + 1) & 3;
+            setDice(firstDice, secondDice);
         } else {
             animationInProgress = false;
-            roll();
         }
     }
 
@@ -74,4 +58,6 @@ window.onload = function() {
 
     document.addEventListener("touchstart", touchEventHandler, false);
     document.addEventListener("touchmove ", touchEventHandler, false);
+
+    setDice(getRandomDice(), getRandomDice());
 };
