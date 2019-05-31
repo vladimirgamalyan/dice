@@ -5,13 +5,16 @@ function getRandomInt(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
+function getRandomDice() {
+    return getRandomInt(0, 3);
+}
+
 window.onload = function() {
-    console.log('onload epta');
-    document.getElementsByClassName('col')[0]
+    document.getElementsByClassName('container')[0]
         .addEventListener('click', function (event) {
-            console.log('clicknuli');
-            let dice = document.getElementsByClassName('first_dice');
-            dice[0].innerHTML = getRandomInt(0, 3);
-            dice[1].innerHTML = getRandomInt(0, 3);
+            console.log('click');
+            let dice = document.getElementsByClassName('dice');
+            dice[0].innerHTML = getRandomDice();
+            dice[1].innerHTML = getRandomDice();
         });
 };
