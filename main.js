@@ -10,8 +10,8 @@ function getRandomDice() {
 }
 
 window.onload = function() {
-    document.getElementsByClassName('container')[0]
-        .addEventListener('click', function (event) {
+    document.getElementsByClassName('click_area')[0]
+        .addEventListener('click touchstart', function (event) {
             console.log('click');
             let dice = document.getElementsByClassName('dice');
             dice[0].innerHTML = getRandomDice();
