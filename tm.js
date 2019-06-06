@@ -3,6 +3,7 @@ window.onload = function() {
 
     let seconds = 0;
     let player = 0;
+    let audio = new Audio('bell.mp3');
 
     function updateScreen() {
         let dice = document.getElementsByClassName('dice');
@@ -22,6 +23,12 @@ window.onload = function() {
 
         clearInterval(timerHandle);
         timerHandle = setInterval(countTimer, 1000);
+
+        if (audio.paused) {
+            audio.play();
+        } else {
+            audio.currentTime = 0
+        }
     }
 
     function touchEventHandler(event) {
