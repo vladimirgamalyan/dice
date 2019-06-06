@@ -25,7 +25,7 @@ body {
 .col {
     display: table-cell;
     vertical-align: middle;
-    font: bold 35vh Arial;
+    font: bold 20vh Arial;
     text-align: center;
     color: #333333
 }
