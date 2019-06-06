@@ -15,6 +15,7 @@ window.onload = function() {
     }
 
     function reset() {
+        // console.log('reset');
         seconds = 0;
         player = 1 - player;
         updateScreen();
@@ -24,12 +25,18 @@ window.onload = function() {
     }
 
     function touchEventHandler(event) {
-        event.preventDefault();
+        console.log('touch');
+        //event.preventDefault();
         reset();
     }
 
-    let clickArea = document.getElementsByClassName('click_area')[0];
-    clickArea.addEventListener('click', reset);
+    function clickEventHandler(event) {
+        console.log('click');
+        reset();
+    }
+
+    // let clickArea = document.getElementsByClassName('click_area')[0];
+    // clickArea.addEventListener('click', clickEventHandler);
 
     document.addEventListener("touchstart", touchEventHandler, false);
     document.addEventListener("touchmove ", touchEventHandler, false);
