@@ -7,6 +7,7 @@ window.onload = function() {
         player = 1;
     }
     let audio = new Audio('bell.mp3');
+    let timerHandle;
 
     function updateScreen() {
         let dice = document.getElementsByClassName('dice');
@@ -24,7 +25,9 @@ window.onload = function() {
         player = 1 - player;
         updateScreen();
 
-        clearInterval(timerHandle);
+        if (timerHandle) {
+            clearInterval(timerHandle);
+        }
         timerHandle = setInterval(countTimer, 1000);
 
         if (audio.paused) {
@@ -56,6 +59,6 @@ window.onload = function() {
         updateScreen();
     }
 
-    updateScreen();
-    let timerHandle = setInterval(countTimer, 1000);
+    //updateScreen();
+    //let timerHandle = setInterval(countTimer, 1000);
 };
