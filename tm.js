@@ -7,9 +7,9 @@ window.onload = function() {
     function updateScreen() {
         let dice = document.getElementsByClassName('dice');
         dice[0].innerHTML = seconds;
-        let playerText = "Iuliia";
+        let playerText = "Юля";
         if (player === 1) {
-            playerText = "Vova";
+            playerText = "Вова";
         }
         dice[1].innerHTML = playerText;
     }
