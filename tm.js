@@ -25,13 +25,13 @@ window.onload = function() {
     }
 
     function touchEventHandler(event) {
-        console.log('touch');
+        //console.log('touch');
         //event.preventDefault();
         reset();
     }
 
     function clickEventHandler(event) {
-        console.log('click');
+        //console.log('click');
         reset();
     }
 
