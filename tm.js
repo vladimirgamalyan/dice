@@ -3,6 +3,9 @@ window.onload = function() {
 
     let seconds = 0;
     let player = 0;
+    if (Math.random() < 0.5) {
+        player = 1;
+    }
     let audio = new Audio('bell.mp3');
 
     function updateScreen() {
